@@ -1,0 +1,75 @@
+body a {
+    text-decoration: none;
+}
+
+.card:hover {
+    transform: scale(1.1) !important;
+}
+
+.card {
+    transition: all 0.5s;
+}
+
+.titleFonts{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bodyFonts{
+    font-family: 'Poppins', sans-serif;
+}
+
+@media screen and (min-width: 992px){
+    .navbar{
+        padding: 0;
+    }
+    .navbar .navbar-nav .nav-link{
+        padding: 1em 0;
+    }
+    .navbar .navbar-nav .nav-item{
+        margin: 0 1em;
+    }
+    .keCourse{
+        padding: 0.7em 0;
+        margin: 0 0.7em;
+    }
+}
+
+.navbar .navbar-nav .nav-item{
+    position: relative;
+}
+.navbar .navbar-nav .nav-item .nonactive::after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    margin: 0 auto;
+    background-color: #498ac6;
+    width: 0%;
+    height: 4px;
+    transition: all 0.5s;
+}
+.navbar .navbar-nav .nav-item .nonactive:hover::after{
+    width: 100%;
+}
+
+.keCourse {
+    position: relative;
+}
+
+.keCourse::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    margin: 0 auto;
+    background-color: #498ac6;
+    width: 0%;
+    height: 4px;
+    transition: all 0.5s;
+}
+
+.keCourse:hover::after{
+    width: 100%;
+}

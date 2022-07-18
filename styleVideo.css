@@ -1,0 +1,191 @@
+body a {
+    text-decoration: none;
+}
+
+.card:hover {
+    transform: scale(1.1) !important;
+}
+
+.card {
+    transition: all 0.5s;
+}
+
+.titleFonts{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bodyFonts{
+    font-family: 'Poppins', sans-serif;
+}
+
+@media screen and (min-width: 992px){
+    .navbar{
+        padding: 0;
+    }
+    .navbar .navbar-nav .nav-link{
+        padding: 1em 0;
+    }
+    .navbar .navbar-nav .nav-item{
+        margin: 0 1em;
+    }
+    .keCourse{
+        padding: 0.7em 0;
+        margin: 0 0.7em;
+    }
+}
+
+.navbar .navbar-nav .nav-item{
+    position: relative;
+}
+.navbar .navbar-nav .nav-item .nonactive::after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    margin: 0 auto;
+    background-color: #498ac6;
+    width: 0%;
+    height: 4px;
+    transition: all 0.5s;
+}
+.navbar .navbar-nav .nav-item .nonactive:hover::after{
+    width: 100%;
+}
+
+.keCourse {
+    position: relative;
+}
+
+.keCourse::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    margin: 0 auto;
+    background-color: #498ac6;
+    width: 0%;
+    height: 4px;
+    transition: all 0.5s;
+}
+
+.keCourse:hover::after{
+    width: 100%;
+}
+
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    color: #498ac6;
+    font-weight: normal;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+}
+
+.head {
+    color: #498ac6;
+    font-size: 40px;
+    text-align: center;
+    padding: 20px;
+}
+
+.kontainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    align-items: flex-start;
+    padding: 5px 5%;
+}
+
+.kontainer .main-vidio {
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.kontainer .main-vidio video{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.kontainer .main-vidio .judul{
+    font-size: 23px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.kontainer .vidio-list{
+    background-color: white;
+    border-radius: 5px;
+    height: 520px;
+    overflow-y: scroll;
+}
+
+.kontainer .vidio-list::-webkit-scrollbar{
+    width: 7px;
+}
+
+.kontainer .vidio-list::-webkit-scrollbar-track{
+    background-color: #ccc;
+    border-radius: 50px;
+}
+
+.kontainer .vidio-list::-webkit-scrollbar-thumb{
+    background-color: #666;
+    border-radius: 50px;
+}
+
+.kontainer .vidio-list .vidio video{
+    width: 100px;
+    border-radius: 5px;
+}
+
+.kontainer .vidio-list .vidio {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,.1);
+    cursor: pointer;
+}
+
+.kontainer .vidio-list .vidio:hover{
+    background-color: #eee;
+}
+
+.kontainer .vidio-list .vidio.active{
+    background-color: #ffc700;
+}
+
+.kontainer .vidio-list .vidio.active .judul{
+    color: black;
+}
+
+.kontainer .vidio-list .vidio .judul{
+    font-size: 15px;
+}
+
+@media (max-width:991px) {
+    .kontainer{
+        grid-template-columns: 1.5fr 1fr;
+        padding: 10px;
+    }
+}
+
+@media (max-width:769px) {
+    .kontainer{
+        grid-template-columns: 1fr;
+    }
+}
